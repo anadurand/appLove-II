@@ -1,0 +1,92 @@
+
+.link{
+  font-weight: 700;
+  padding: 21px;
+  display: inline-block;
+}
+
+.logo{
+  float: right; /*Hacer que el logo se ponga a la derecha*/
+}
+
+header{
+  position: fixed;
+  background: white;
+  width: 100%;
+  top: 0;
+}
+.menu{
+  padding: 14px 70px;
+  overflow: auto;
+}
+#home{
+  background-image: url(../img/bg-home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  /*cubre el tamaño del contenedor*/
+  height: 554px;
+  text-align: center;
+  margin-top: 80px;
+}
+#home .container{
+  color: white;
+  padding: 70px;
+}
+.text-home{
+  font-size: 53px;
+}
+.btn-home{
+  background: #2ECC71;
+  color: #fff;
+  padding: 11px 20px;
+  border-radius: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 63px;
+  display: inline-block;
+  font-size: 14px;
+}
+#services{
+  background-color: #F17C72;
+  text-align: center;
+  color: #fff;
+  padding: 70px 7px;
+}
+.box-services{
+  display: inline-block;
+  width: 30%;
+  margin-top: 63px;
+}
+.text-services{
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+footer{
+  text-align: center;
+  height: 70px;
+  background: #373B47;
+  color: white;
+  padding-top: 7px;
+}
+#work{
+  background-color: #fff;
+  text-align: center;
+  padding: 70px 7px;
+}
+.box-products{
+  display: inline-block;
+  width: 90%;
+  margin-top: 30px;
+}
+.products{
+  width: 30%;
+  display: inline-block;
+}
+.products img{
+  width: 100%;
+  padding: 10%;
+}
+.text-work{
+  font-size: 35px;
+  letter-spacing: 2px;
+}
