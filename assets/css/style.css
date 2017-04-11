@@ -131,3 +131,6 @@ footer{
     text-decoration: none;
     cursor: pointer;
 }
+.hidden{
+  overflow: hidden;
+}
