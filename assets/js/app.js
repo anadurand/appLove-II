@@ -23,6 +23,7 @@ window.addEventListener("load", function(){
 
   leftButton.addEventListener("click", function(e){
     console.log(e.target.parentNode.img);
+
   });
 
 });
