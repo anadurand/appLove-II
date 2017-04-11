@@ -4,6 +4,7 @@ window.addEventListener("load", function(){
   var img = document.getElementById("img01");
   var body = document.getElementById("body");
   var closed = document.getElementById("close");
+  var leftButton = document.getElementById("buttonLeft");
 
   for(i=0; i<imagenes.length; i++){
     imagenes[i].addEventListener("click", function(event){
@@ -18,6 +19,10 @@ window.addEventListener("load", function(){
   closed.addEventListener("click", function(){
     modalBox.style.display = "none";
     body.classList.remove("hidden");
+  });
+
+  leftButton.addEventListener("click", function(e){
+    console.log(e.target.parentNode.img);
   });
 
 });
