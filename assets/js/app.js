@@ -5,11 +5,17 @@ window.addEventListener("load", function(){
 
   for(i=0; i<imagenes.length; i++){
     imagenes[i].addEventListener("click", function(event){
+      event.preventDefault();
         img.src = event.target.src;
-        modalBox.display = "block";
+        modalBox.style.display = "block";
 
     });
   }
 
+  var closed = document.getElementById("close");
+
+  closed.addEventListener("click", function(){
+    modalBox.style.display = "none";
+  });
 
 });
