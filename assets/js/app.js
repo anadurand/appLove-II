@@ -5,6 +5,7 @@ window.addEventListener("load", function(){
   var body = document.getElementById("body");
   var closed = document.getElementById("close");
   var leftButton = document.getElementById("buttonLeft");
+  var rightButton = document.getElementById("buttonRight");
 
   for(i=0; i<imagenes.length; i++){
     imagenes[i].addEventListener("click", function(event){
@@ -12,7 +13,7 @@ window.addEventListener("load", function(){
         body.classList.add("hidden");
         img.src = event.target.src;
         modalBox.style.display = "block";
-
+          buscarImg(img.src);
     });
   }
 
@@ -22,8 +23,35 @@ window.addEventListener("load", function(){
   });
 
   leftButton.addEventListener("click", function(e){
-    console.log(e.target.parentNode.img);
-
+    moveImag(-1);
+  });
+  rightButton.addEventListener("click", function(e){
+    moveImag(1);
   });
 
+
+  var actualImg = 1;
+  var ImgUrl = [];
+  for(i=0; i<imagenes.length; i++){
+    ImgUrl.push(imagenes[i].src);
+  }
+  function buscarImg(ruta){
+    for(i=0; i<ImgUrl.length; i++){
+
+      if(ruta == ImgUrl[i]){
+        actualImg = i+1;
+      }
+    }
+  }
+  function moveImag(n){
+    actualImg += n;
+    console.log(actualImg);
+    if(actualImg > imagenes.length){
+      actualImg = 1;
+    }
+    if(actualImg < 1){
+      actualImg = imagenes.length;
+    }
+    img.src = ImgUrl[actualImg-1];
+  }
 });
